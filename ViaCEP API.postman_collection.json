@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "ae0e1950-8635-4887-af69-2f27014377fc",
+		"name": "ViaCEP API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "16164970"
+	},
+	"item": [
+		{
+			"name": "Busca CEP",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "URL: viacep.com.br/ws/01001000/json/\r\n\r\n    {\r\n      \"cep\": \"01001-000\",\r\n      \"logradouro\": \"Praça da Sé\",\r\n      \"complemento\": \"lado ímpar\",\r\n      \"unidade\": \"\",\r\n      \"bairro\": \"Sé\",\r\n      \"localidade\": \"São Paulo\",\r\n      \"uf\": \"SP\",\r\n      \"ibge\": \"3550308\",\r\n      \"gia\": \"1004\",\r\n      \"ddd\": \"11\",\r\n      \"siafi\": \"7107\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://viacep.com.br/ws/{CEP}/json/"
+			},
+			"response": []
+		},
+		{
+			"name": "Busca por endereço",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "URL: viacep.com.br/ws/01001000/json/\r\n\r\n    {\r\n      \"cep\": \"01001-000\",\r\n      \"logradouro\": \"Praça da Sé\",\r\n      \"complemento\": \"lado ímpar\",\r\n      \"unidade\": \"\",\r\n      \"bairro\": \"Sé\",\r\n      \"localidade\": \"São Paulo\",\r\n      \"uf\": \"SP\",\r\n      \"ibge\": \"3550308\",\r\n      \"gia\": \"1004\",\r\n      \"ddd\": \"11\",\r\n      \"siafi\": \"7107\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://viacep.com.br/ws/RS/PortoAlegre/Domingos/json/"
+			},
+			"response": []
+		},
+		{
+			"name": "Formato xml",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://viacep.com.br/ws/01001000/xml/"
+			},
+			"response": []
+		},
+		{
+			"name": "Busca CEP por Lote",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  \"01001000\",\r\n  \"01002000\",\r\n  \"01003000\"\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://viacep.com.br/ws/batch/"
+			},
+			"response": []
+		}
+	]
+}
